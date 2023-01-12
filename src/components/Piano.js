@@ -65,8 +65,7 @@ export default function Piano() {
       keyState.map((item, idx) => {
         if (idx === index) {
           if (item) {
-            synth.triggerRelease(notes[index]);
-            // synth.triggerRelease(notes[index], Tone.now());
+            synth.triggerRelease(notes[index]); // synth.triggerRelease(notes[index], Tone.now());
 
             // synth.triggerRelease(notes[index], Tone.now() + 1);
 
