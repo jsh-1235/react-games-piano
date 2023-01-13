@@ -2,7 +2,19 @@ import React, { Component } from "react";
 
 import styles from "./Keyboard.module.css";
 
+import Info from "./Info";
+
+import PropTypes from "prop-types";
+
 export default class Keyboard extends Component {
+  static propTypes = {
+    colors: PropTypes.array,
+  };
+
+  static defaultProps = {
+    colors: ["#d32f2f", "#c2185b", "#7b1fa2", "#512da8", "#303f9f", "#1976d2", "#0097a7", "#388e3c"],
+  };
+
   constructor(props) {
     super(props);
 
@@ -60,9 +72,7 @@ export default class Keyboard extends Component {
   render() {
     return (
       <div className={styles.outline} style={{ backgroundColor: this.state.bgColor }} onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} onMouseOut={this.handleMouseOut}>
-        <span className={styles.note} style={{ color: this.state.fgColor }}>
-          {this.props.note}
-        </span>
+        <Info color={this.props.colors[this.props.index]} note={this.props.note} />
         <span className={styles.name} style={{ color: this.state.fgColor }}>
           {this.props.name}
         </span>

@@ -4,7 +4,7 @@
 
 - npx create-react-app Project
 - npm install react-router react-router-dom
-- npm install styled-components clsx
+- npm install styled-components clsx  (CSS in JS)
 - npm install @mui/material @emotion/react @emotion/styled
 - npm install @mui/styled-engine-sc
 - npm install @mui/styles

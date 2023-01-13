@@ -25,14 +25,18 @@ export default function Piano() {
   const [bg, setBG] = useState("#bdbdbd");
 
   useEffect(() => {
-    // console.log("rendering");
-  });
-
-  useEffect(() => {
     // console.log("componentDidMount");
 
     ref.current.focus();
+
+    return () => {
+      console.log("componentWillUnmount");
+    };
   }, []);
+
+  useEffect(() => {
+    // console.log("rendering");
+  });
 
   useEffect(() => {
     console.log("play", code);

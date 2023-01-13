@@ -16,9 +16,10 @@
 .note {
   text-align: center;
   font-weight: bolder;
+  font-size: 1rem;
   color: #1c313a;
   padding: 0px;
-  margin: 10px;
+  margin: 0px;
 }
 
 .name {
