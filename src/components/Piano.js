@@ -30,12 +30,12 @@ export default function Piano() {
     ref.current.focus();
 
     return () => {
-      console.log("componentWillUnmount");
+      // console.log("componentWillUnmount");
     };
   }, []);
 
   useEffect(() => {
-    // console.log("rendering");
+    // console.log("componentDidUpdate");
   });
 
   useEffect(() => {
